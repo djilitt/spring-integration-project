@@ -16,15 +16,15 @@ public class Livre {
 
     private String auteur;
 
-    private Date date;
+    private String date_entre;
 
     public  Livre(){
 
     }
-    public Livre(String title, String auteur, Date date) {
+    public Livre(String title, String auteur, String date_entre) {
         this.title=title;
         this.auteur=auteur;
-        this.date=date;
+        this.date_entre=date_entre;
     }
 
     public int getId() {
@@ -51,12 +51,12 @@ public class Livre {
         this.auteur = auteur;
     }
 
-    public Date getDate() {
-        return date;
+    public String getDate() {
+        return date_entre;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDate(String date_entre) {
+        this.date_entre = date_entre;
     }
 
 }

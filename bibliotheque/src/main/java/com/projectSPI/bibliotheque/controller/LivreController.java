@@ -34,8 +34,10 @@ public class LivreController {
                 System.out.println("livre is empty");
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }else {
-                System.out.println("livre has one");
+                System.out.println("livre is not empty");
+
                 return  new ResponseEntity<List<Livre>>(livres,HttpStatus.OK);
+
             }
         }catch (Exception e){
 
@@ -56,14 +58,14 @@ public class LivreController {
 //    }
 
 
-    @PostMapping("Livre")
-    public ResponseEntity<Livre> createLivre(@RequestBody Livre livre){
-        try{
-            Livre _livre = livreRepository
-                    .save(new Livre(livre.getTitle(),livre.getAuteur(),livre.getDate()));
-            return new ResponseEntity<Livre>(_livre,HttpStatus.OK);
-        }catch (Exception e){
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
+//    @PostMapping("Livre")
+//    public ResponseEntity<Livre> createLivre(@RequestBody Livre livre){
+//        try{
+//            Livre _livre = livreRepository
+//                    .save(new Livre(livre.getTitle(),livre.getAuteur(),livre.getDate()));
+//            return new ResponseEntity<Livre>(_livre,HttpStatus.OK);
+//        }catch (Exception e){
+//            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+//        }
+//    }
 }
