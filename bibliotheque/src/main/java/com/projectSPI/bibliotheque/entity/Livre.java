@@ -18,6 +18,15 @@ public class Livre {
 
     private Date date;
 
+    public  Livre(){
+
+    }
+    public Livre(String title, String auteur, Date date) {
+        this.title=title;
+        this.auteur=auteur;
+        this.date=date;
+    }
+
     public int getId() {
         return id;
     }
