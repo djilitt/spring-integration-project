@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-public class Transaction {
+public class Emprunt {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
