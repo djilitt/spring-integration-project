@@ -25,14 +25,10 @@ public class EmpruntController {
     }
     @PostMapping("/Emprunt")
     public ResponseEntity<?> borrowBook(@RequestBody BorrowRequestDTO borrowRequest) {
-        try {
+
             livreEmpruntService.processBorrowRequest(borrowRequest);
             return ResponseEntity.ok().body("Book borrowed successfully");
-        } catch (RuntimeException e) {
-            // Return an error response if there is a runtime exception (e.g., book/user not found, book not available)
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
-        // You might want to handle other types of exceptions as well
+      
     }
     
 }
