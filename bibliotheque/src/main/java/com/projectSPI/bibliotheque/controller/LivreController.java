@@ -23,7 +23,6 @@ public class LivreController {
         try{
             List<Livre> livres = new ArrayList<Livre>();
             if(title == null) {
-                System.out.println("title === nulll");
                 livreRepository.findAll().forEach(livres::add);
             }
             else {
@@ -68,4 +67,5 @@ public class LivreController {
 //            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 //        }
 //    }
+
 }

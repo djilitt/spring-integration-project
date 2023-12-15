@@ -17,22 +17,29 @@ public class Livre {
     private String auteur;
 
     private String date_entre;
+    private boolean Disponibilite;
 
     public  Livre(){
 
     }
-    public Livre(String title, String auteur, String date_entre) {
+    public Livre(String title, String auteur, String date_entre,boolean  Dispo) {
         this.title=title;
         this.auteur=auteur;
         this.date_entre=date_entre;
+        this.Disponibilite=Dispo;
+
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public boolean isDisponibilite() {
+        return Disponibilite;
+    }
+
+    public void setDisponibilite(boolean disponibilite) {
+        Disponibilite = disponibilite;
     }
 
     public String getTitle() {
