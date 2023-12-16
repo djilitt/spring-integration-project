@@ -1,17 +1,21 @@
 package com.project.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.project.model.Address;
 import com.project.model.Student;
 import com.project.service.IntegrationGetway;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.integration.annotation.IntegrationComponentScan;
+import org.springframework.integration.annotation.Payloads;
+import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.integration.annotation.Transformer;
 import org.springframework.integration.channel.DirectChannel;
 import org.springframework.integration.channel.NullChannel;
 import org.springframework.integration.config.EnableIntegration;
 import org.springframework.integration.json.JsonToObjectTransformer;
 import org.springframework.integration.json.ObjectToJsonTransformer;
+import org.springframework.integration.router.PayloadTypeRouter;
 import org.springframework.integration.support.json.Jackson2JsonObjectMapper;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
@@ -35,21 +39,14 @@ public class IntegrationConfig {
         return new DirectChannel();
     }
 
+    @ServiceActivator(inputChannel = "router.channel")
     @Bean
-    @Transformer(inputChannel = "integration.student.gateway.channel", outputChannel = "integration.student.objectToJson.channel")
-    public ObjectToJsonTransformer objectToJsonTransformer(){
-        return new ObjectToJsonTransformer(getMapper());
+    public PayloadTypeRouter router(){
+        PayloadTypeRouter router = new PayloadTypeRouter();
+        router.setChannelMapping(Student.class.getName(),"student.channel");
+        router.setChannelMapping(Address.class.getName(),"address.channel");
+        return router;
+
     }
 
-    @Bean
-    public Jackson2JsonObjectMapper getMapper(){
-        ObjectMapper mapper = new ObjectMapper();
-        return new Jackson2JsonObjectMapper(mapper);
-    }
-
-    @Bean
-    @Transformer(inputChannel = "integration.student.jsonToObject.channel", outputChannel = "integration.student.jsonToObject.fromTransformer.channel")
-    JsonToObjectTransformer jsonToObjectTransformer(){
-        return new JsonToObjectTransformer(Student.class);
-    }
 }

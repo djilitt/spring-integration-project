@@ -1,5 +1,6 @@
 package com.project.controller;
 
+import com.project.model.Address;
 import com.project.model.Student;
 import com.project.service.IntegrationGetway;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +12,14 @@ public class IntegrationController {
     @Autowired
     private IntegrationGetway integrationGetway;
 
-    @GetMapping(value = "{name}")
-    public String getMessageFromIntegrationService(@PathVariable("name") String name){
-        return integrationGetway.sendMessage(name);
+    @PostMapping("/student")
+    public void processStudentDetails(@RequestBody Student student){
+        integrationGetway.process(student);
     }
 
-    @PostMapping
-    public  String processstudentDetails(@RequestBody Student student){
-        return integrationGetway.processStudentDetails(student);
+    @PostMapping("/address")
+    public void processAddressDetails(@RequestBody Address address){
+        integrationGetway.process(address);
     }
 
 }
