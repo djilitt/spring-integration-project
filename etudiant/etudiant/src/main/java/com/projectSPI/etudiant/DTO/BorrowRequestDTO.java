@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class BorrowRequestDTO {
 
-    private String StudentMatricule;
+    private Integer StudentMatricule;
 
     private Long userId;
 
@@ -37,12 +37,12 @@ public class BorrowRequestDTO {
         this.returnDate = returnDate;
     }
 
-    public String getStudentMatricule() {
+    public Integer getStudentMatricule() {
         return StudentMatricule;
     }
 
-    public void setStudentMatricule(String studentMatricule) {
-        StudentMatricule = studentMatricule;
+    public void setStudentMatricule(Integer studentMatricule) {
+        this.StudentMatricule = studentMatricule;
     }
 
     public Long getUserId() {

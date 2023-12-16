@@ -44,15 +44,20 @@ public class LivreEmpruntService {
                     .orElseThrow(() -> new RuntimeException("User not found"));
             emprunt = new Emprunt(user, book, borrowRequest.getCheckoutDate(), borrowRequest.getReturnDate());
             System.out.println("user 36awhlne");
-        } else {
+            empruntRepository.save(emprunt);
+        } if(borrowRequest.getStudentMatricule() != null) {
             // Borrowing by External System Student
             // Assume studentMatricule is provided in BorrowRequestDTO
             emprunt = new Emprunt(borrowRequest.getStudentMatricule(), book, borrowRequest.getCheckoutDate(), borrowRequest.getReturnDate());
             System.out.println(" 36awlne matricule");
+            empruntRepository.save(emprunt);
+        }
+        else{
+            System.out.println("dele");
         }
 
 
-        empruntRepository.save(emprunt);
+
     }
 
 }

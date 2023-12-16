@@ -43,6 +43,7 @@ public class LmsIntegrationConfig {
                 try {
                     // Assuming the payload is of type BorrowRequestDTO
                     BorrowRequestDTO payload = (BorrowRequestDTO) message.getPayload();
+                    System.out.println("Received payload: " + payload);
                     livreEmpruntService.processBorrowRequest(payload);
                     return true; // Indicating successful processing
                 } catch (MessagingException e) {

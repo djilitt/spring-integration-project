@@ -10,7 +10,7 @@ public class BorrowRequestDTO {
     private  Long bookId;
     private LocalDate checkoutDate;
     private LocalDate returnDate;
-    private String StudentMatricule;
+    private Integer  StudentMatricule;
 
     public  long getBookId() {
         return bookId;
@@ -49,11 +49,11 @@ public class BorrowRequestDTO {
     }
 
 
-    public String getStudentMatricule() {
+    public Integer getStudentMatricule() {
         return StudentMatricule;
     }
 
-    public void setStudentMatricule(String studentMatricule) {
+    public void setStudentMatricule(Integer studentMatricule) {
         StudentMatricule = studentMatricule;
     }
 }

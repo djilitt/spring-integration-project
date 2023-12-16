@@ -22,11 +22,11 @@ public class EmpruntService {
     @Qualifier("requestChannel")
     private MessageChannel requestChannel;
 
-    public boolean borrowBook(String studentMatricule,Long userId, Long bookId, LocalDate checkoutDate, LocalDate returnDate) {
+    public boolean borrowBook(Integer studentMatricule,Long userId, Long bookId, LocalDate checkoutDate, LocalDate returnDate) {
         BorrowRequestDTO requestDTO = new BorrowRequestDTO();
         requestDTO.setStudentMatricule(studentMatricule);
         requestDTO.setBookId(bookId);
-        requestDTO.setBookId(userId);
+        requestDTO.setUserId(userId);
         requestDTO.setCheckoutDate(checkoutDate);
         requestDTO.setReturnDate(returnDate);
 

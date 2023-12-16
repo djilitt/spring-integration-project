@@ -47,7 +47,7 @@ public class EtudiantController {
     @PostMapping("/EmpruntSms")
     public ResponseEntity<String> borrowBook(@RequestBody BorrowRequestDTO borrowRequestDTO) {
         boolean success = empruntService.borrowBook(borrowRequestDTO.getStudentMatricule(),borrowRequestDTO.getUserId(), borrowRequestDTO.getBookId(), borrowRequestDTO.getCheckoutDate(), borrowRequestDTO.getReturnDate());
-
+        System.out.println(borrowRequestDTO.getStudentMatricule());
         if (success) {
             return ResponseEntity.ok("Borrow request processed successfully.");
         } else {

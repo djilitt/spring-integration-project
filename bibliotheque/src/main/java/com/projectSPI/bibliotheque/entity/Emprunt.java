@@ -17,7 +17,7 @@ public class Emprunt {
     @ManyToOne
     private Livre livre;
 
-    private String studentMatricule;
+    private Integer studentMatricule;
     private LocalDate checkoutDate;
     private LocalDate returnDate;
 
@@ -34,7 +34,7 @@ public class Emprunt {
     }
 
     // Constructor for External System (SMS) Student
-    public Emprunt(String studentMatricule, Livre livre, LocalDate checkoutDate, LocalDate returnDate) {
+    public Emprunt(Integer studentMatricule, Livre livre, LocalDate checkoutDate, LocalDate returnDate) {
         // Assuming you have a field to store external system identifier
         this.studentMatricule = studentMatricule;
         this.livre = livre;
@@ -72,5 +72,13 @@ public class Emprunt {
 
     public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
+    }
+
+    public Integer getStudentMatricule() {
+        return studentMatricule;
+    }
+
+    public void setStudentMatricule(Integer studentMatricule) {
+        this.studentMatricule = studentMatricule;
     }
 }
