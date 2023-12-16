@@ -4,18 +4,14 @@ import java.time.LocalDate;
 
 public class BorrowRequestDTO {
 
+    private String StudentMatricule;
+
     private Long userId;
+
     private Long bookId;
     private LocalDate checkoutDate;
     private LocalDate returnDate;
 
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
 
     public Long getBookId() {
         return bookId;
@@ -39,5 +35,21 @@ public class BorrowRequestDTO {
 
     public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
+    }
+
+    public String getStudentMatricule() {
+        return StudentMatricule;
+    }
+
+    public void setStudentMatricule(String studentMatricule) {
+        StudentMatricule = studentMatricule;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 }

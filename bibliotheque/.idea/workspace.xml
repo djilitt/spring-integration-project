@@ -5,46 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1232ab7-4e3b-4143-bb04-fc58465040d0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bff0839d-5be9-4c32-8efa-b9cb50a40eb7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bff0839d-5be9-4c32-8efa-b9cb50a40eb7/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bff0839d-5be9-4c32-8efa-b9cb50a40eb7/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bff0839d-5be9-4c32-8efa-b9cb50a40eb7/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/Integrations/LmsIntegrationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/DTO/BorrowRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/DTO/BorrowRequestDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/controller/EmpruntController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/controller/EmpruntController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/controller/LivreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/controller/LivreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/BibliothequeApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/DTO/BorrowRequestDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/controller/EmpruntController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/controller/LivreController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/entity/Emprunt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/entity/Livre.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/repository/EmpruntRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/repository/LivreRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/repository/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/service/LivreEmpruntService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../etudiant/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../etudiant/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../etudiant/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../etudiant/.idea/etudiant.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../etudiant/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../etudiant/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../etudiant/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../etudiant/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/entity/Emprunt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/entity/Emprunt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/service/LivreEmpruntService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/service/LivreEmpruntService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/DTO/BorrowRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/DTO/BorrowRequestDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/controller/EmpruntController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/controller/EmpruntController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/entity/Emprunt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/entity/Emprunt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/service/LivreEmpruntService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/service/LivreEmpruntService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/Controllers/EtudiantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/Controllers/EtudiantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/DTO/BorrowRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/DTO/BorrowRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/Integrations/IntegrationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/Integrations/IntegrationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/Services/EmpruntService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/Services/EmpruntService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../etudiant/etudiant/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../etudiant/etudiant/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -59,6 +49,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -88,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702685875417</updated>
-      <workItem from="1702685876551" duration="635000" />
+      <workItem from="1702685876551" duration="11612000" />
     </task>
     <servers />
   </component>

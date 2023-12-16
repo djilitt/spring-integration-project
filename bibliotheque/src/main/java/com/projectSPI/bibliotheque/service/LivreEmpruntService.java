@@ -37,16 +37,22 @@ public class LivreEmpruntService {
         livreRepository.save(book);
 
         // 3. Create an Emprunt record
-        Emprunt emprunt = new Emprunt();
-        // Assuming you have a method to find a User by ID
-        User user = userRepository.findById(borrowRequest.getUserId())
-                .orElseThrow(() -> new RuntimeException("User not found"));
-        // Set properties of emprunt based on borrowRequest
-        emprunt.setUser(user);
-        emprunt.setLivre(book);
-        emprunt.setCheckoutDate(borrowRequest.getCheckoutDate());
-        emprunt.setReturnDate(borrowRequest.getReturnDate()); // Only set this if your DTO includes a return date
+        Emprunt emprunt;
+        if (borrowRequest.getUserId() != null) {
+            // Borrowing by LMS User
+            User user = userRepository.findById(borrowRequest.getUserId())
+                    .orElseThrow(() -> new RuntimeException("User not found"));
+            emprunt = new Emprunt(user, book, borrowRequest.getCheckoutDate(), borrowRequest.getReturnDate());
+            System.out.println("user 36awhlne");
+        } else {
+            // Borrowing by External System Student
+            // Assume studentMatricule is provided in BorrowRequestDTO
+            emprunt = new Emprunt(borrowRequest.getStudentMatricule(), book, borrowRequest.getCheckoutDate(), borrowRequest.getReturnDate());
+            System.out.println(" 36awlne matricule");
+        }
+
 
         empruntRepository.save(emprunt);
     }
+
 }

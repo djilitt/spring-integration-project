@@ -1,5 +1,7 @@
 package com.projectSPI.bibliotheque.DTO;
 
+import com.projectSPI.bibliotheque.entity.User;
+
 import java.time.LocalDate;
 
 public class BorrowRequestDTO {
@@ -8,6 +10,7 @@ public class BorrowRequestDTO {
     private  Long bookId;
     private LocalDate checkoutDate;
     private LocalDate returnDate;
+    private String StudentMatricule;
 
     public  long getBookId() {
         return bookId;
@@ -46,4 +49,11 @@ public class BorrowRequestDTO {
     }
 
 
+    public String getStudentMatricule() {
+        return StudentMatricule;
+    }
+
+    public void setStudentMatricule(String studentMatricule) {
+        StudentMatricule = studentMatricule;
+    }
 }

@@ -17,6 +17,7 @@ public class Emprunt {
     @ManyToOne
     private Livre livre;
 
+    private String studentMatricule;
     private LocalDate checkoutDate;
     private LocalDate returnDate;
 
@@ -24,7 +25,22 @@ public class Emprunt {
         return id;
     }
 
+    // Constructor for LMS User
+    public Emprunt(User user, Livre livre, LocalDate checkoutDate, LocalDate returnDate) {
+        this.user = user;
+        this.livre = livre;
+        this.checkoutDate = checkoutDate;
+        this.returnDate = returnDate;
+    }
 
+    // Constructor for External System (SMS) Student
+    public Emprunt(String studentMatricule, Livre livre, LocalDate checkoutDate, LocalDate returnDate) {
+        // Assuming you have a field to store external system identifier
+        this.studentMatricule = studentMatricule;
+        this.livre = livre;
+        this.checkoutDate = checkoutDate;
+        this.returnDate = returnDate;
+    }
 
     public User getUser() {
         return user;

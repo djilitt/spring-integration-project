@@ -4,6 +4,7 @@ import com.projectSPI.etudiant.DTO.BorrowRequestDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.integration.support.MessageBuilder;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
@@ -18,18 +19,22 @@ public class EmpruntService {
     private static final Logger logger = LoggerFactory.getLogger(EmpruntService.class);
 
     @Autowired
+    @Qualifier("requestChannel")
     private MessageChannel requestChannel;
 
-    public boolean borrowBook(Long userId, Long bookId, LocalDate checkoutDate, LocalDate returnDate) {
+    public boolean borrowBook(String studentMatricule,Long userId, Long bookId, LocalDate checkoutDate, LocalDate returnDate) {
         BorrowRequestDTO requestDTO = new BorrowRequestDTO();
-        requestDTO.setUserId(userId);
+        requestDTO.setStudentMatricule(studentMatricule);
         requestDTO.setBookId(bookId);
+        requestDTO.setBookId(userId);
         requestDTO.setCheckoutDate(checkoutDate);
         requestDTO.setReturnDate(returnDate);
 
         Message<BorrowRequestDTO> message = MessageBuilder.withPayload(requestDTO)
                 .setHeader("Content-Type", "application/json")
                 .build();
+        logger.info("Sending borrow request: {}", requestDTO);
+
 
         try {
             this.requestChannel.send(message);

@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @RestController
-@RequestMapping("/api/emprunts")
+@RequestMapping("/api")
 public class EmpruntController {
 
     @Autowired
