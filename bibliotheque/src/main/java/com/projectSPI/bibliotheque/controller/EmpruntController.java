@@ -9,6 +9,7 @@ import com.projectSPI.bibliotheque.repository.LivreRepository;
 import com.projectSPI.bibliotheque.repository.UserRepository;
 import com.projectSPI.bibliotheque.service.LivreEmpruntService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -48,9 +49,15 @@ public class EmpruntController {
 
     @PostMapping("/Emprunt")
     public ResponseEntity<?> borrowBook(@RequestBody BorrowRequestDTO borrowRequest) {
-        livreEmpruntService.processBorrowRequest(borrowRequest);
-        return ResponseEntity.ok().body("Book borrowed successfully");
+        boolean success = livreEmpruntService.processBorrowRequest(borrowRequest);
+
+        if (success) {
+            return ResponseEntity.ok().body("Student borrowed book successfully");
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Student failed to borrow the book");
+        }
     }
+
 
 //    @GetMapping("/generateRandomData")
 //    public ResponseEntity<String> generateRandomEmpruntData() {

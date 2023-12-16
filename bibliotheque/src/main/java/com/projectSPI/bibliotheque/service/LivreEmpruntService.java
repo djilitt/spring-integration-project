@@ -25,13 +25,17 @@ public class LivreEmpruntService {
     }
 
     @Transactional
-    public void processBorrowRequest(BorrowRequestDTO borrowRequest) {
+    public boolean processBorrowRequest(BorrowRequestDTO borrowRequest) {
         // 1. Check if the book is available
         Livre book = livreRepository.findById(borrowRequest.getBookId()).orElseThrow(() -> new RuntimeException("Book not found"));
         if (!book.isDisponibilite()) {
-            throw new RuntimeException("Book is not available");
+            System.out.println("Book is not available") ;
+            return false;
+
         }
 
+
+        else {
         // 2. Update the book's availability
         book.setDisponibilite(false);
         livreRepository.save(book);
@@ -55,9 +59,9 @@ public class LivreEmpruntService {
         else{
             System.out.println("dele");
         }
+    return true;
 
+    }}
 
-
-    }
 
 }

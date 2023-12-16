@@ -6,15 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a1232ab7-4e3b-4143-bb04-fc58465040d0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/DTO/BorrowRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/DTO/BorrowRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/Integrations/LmsIntegrationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/Integrations/LmsIntegrationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/controller/EmpruntController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/controller/EmpruntController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/entity/Emprunt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/entity/Emprunt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/service/LivreEmpruntService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projectSPI/bibliotheque/service/LivreEmpruntService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/DTO/BorrowRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/DTO/BorrowRequestDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/controller/EmpruntController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/controller/EmpruntController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/entity/Emprunt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/entity/Emprunt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/service/LivreEmpruntService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/projectSPI/bibliotheque/service/LivreEmpruntService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/Controllers/EtudiantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/Controllers/EtudiantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/DTO/BorrowRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/DTO/BorrowRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/Integrations/IntegrationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/Integrations/IntegrationConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/Services/EmpruntService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../etudiant/etudiant/src/main/java/com/projectSPI/etudiant/Services/EmpruntService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702685875417</updated>
-      <workItem from="1702685876551" duration="17629000" />
+      <workItem from="1702685876551" duration="24167000" />
     </task>
     <servers />
   </component>

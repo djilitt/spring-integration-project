@@ -21,6 +21,11 @@ public class Emprunt {
     private LocalDate checkoutDate;
     private LocalDate returnDate;
 
+    public Emprunt() {
+
+    }
+
+
     public Long getId() {
         return id;
     }

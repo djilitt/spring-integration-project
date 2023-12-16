@@ -1,5 +1,6 @@
 package com.projectSPI.etudiant.Integrations;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -32,8 +33,10 @@ public class IntegrationConfig {
                 new HttpRequestExecutingMessageHandler("http://localhost:9090/api/Emprunt");
         handler.setHttpMethod(HttpMethod.POST);
         handler.setExpectedResponseType(String.class);
-        // Additional configurations like headers, error handling, etc.
+        handler.setOutputChannel(replyChannel()); // Set the output channel programmatically
+        handler.setSendTimeout(10000); // Set the timeout
 
+        // Additional configurations
         return handler;
     }
 
