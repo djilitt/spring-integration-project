@@ -6,7 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.github.javafaker.Faker;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.http.HttpStatus;
+//import org.springframework.http.ResponseEntity;
+//import org.springframework.web.bind.annotation.*;
+//import com.github.javafaker.Faker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,62 +50,62 @@ public class LivreController {
         }
     }
 
-    @GetMapping("/generateRandomNames")
-    public List<String> generateRandomNames() {
-        List<String> randomNames = new ArrayList<>();
-        Faker faker = new Faker();
-
-        for (int i = 0; i < 10; i++) {
-            String randomName = faker.name().fullName();
-            randomNames.add(randomName);
-        }
-
-        // Print the generated names
-        for (String name : randomNames) {
-            System.out.println(name);
-        }
-
-        return randomNames;
-    }
-
-
-    @GetMapping("/generateRandomData")
-    public ResponseEntity<String> generateRandomData() {
-        try {
-            List<Livre> randomLivres = new ArrayList<>();
-            Faker faker = new Faker();
-            Random random = new Random();
-
-            for (int i = 0; i < 10; i++) {
-                String randomTitle = faker.book().title();
-                String randomAuteur = faker.book().author();
-                String randomDate = faker.date().birthday().toString();
-                boolean randomDisponibilite = random.nextBoolean();
-
-                Livre livre = new Livre(randomTitle, randomAuteur, randomDate, randomDisponibilite);
-                randomLivres.add(livre);
-            }
-
-            // Save the generated Livres to the repository
-            livreRepository.saveAll(randomLivres);
-
-            return new ResponseEntity<>("Random data inserted successfully", HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>("Failed to insert random data", HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
-
-//    @GetMapping("/livre/{id}")
-//    public ResponseEntity<Livre> getLivreById(@PathVariable("id") long id){
-//        Optional<Livre> livre= livreRepository.findById(id);
-//        if(livre.isPresent()){
-//            return new ResponseEntity<Livre>(livre.get(), HttpStatus.OK);
+//    @GetMapping("/generateRandomNames")
+//    public List<String> generateRandomNames() {
+//        List<String> randomNames = new ArrayList<>();
+//        Faker faker = new Faker();
 //
-//        }else {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND) ;
+//        for (int i = 0; i < 10; i++) {
+//            String randomName = faker.name().fullName();
+//            randomNames.add(randomName);
+//        }
+//
+//        // Print the generated names
+//        for (String name : randomNames) {
+//            System.out.println(name);
+//        }
+//
+//        return randomNames;
+//    }
+//
+//
+//    @GetMapping("/generateRandomData")
+//    public ResponseEntity<String> generateRandomData() {
+//        try {
+//            List<Livre> randomLivres = new ArrayList<>();
+//            Faker faker = new Faker();
+//            Random random = new Random();
+//
+//            for (int i = 0; i < 10; i++) {
+//                String randomTitle = faker.book().title();
+//                String randomAuteur = faker.book().author();
+//                String randomDate = faker.date().birthday().toString();
+//                boolean randomDisponibilite = random.nextBoolean();
+//
+//                Livre livre = new Livre(randomTitle, randomAuteur, randomDate, randomDisponibilite);
+//                randomLivres.add(livre);
+//            }
+//
+//            // Save the generated Livres to the repository
+//            livreRepository.saveAll(randomLivres);
+//
+//            return new ResponseEntity<>("Random data inserted successfully", HttpStatus.OK);
+//        } catch (Exception e) {
+//            return new ResponseEntity<>("Failed to insert random data", HttpStatus.INTERNAL_SERVER_ERROR);
 //        }
 //    }
+
+
+    @GetMapping("/livre/{id}")
+    public ResponseEntity<Livre> getLivreById(@PathVariable("id") long id){
+        Optional<Livre> livre= livreRepository.findById(id);
+        if(livre.isPresent()){
+            return new ResponseEntity<Livre>(livre.get(), HttpStatus.OK);
+
+        }else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND) ;
+        }
+    }
 
 
 //    @PostMapping("Livre")

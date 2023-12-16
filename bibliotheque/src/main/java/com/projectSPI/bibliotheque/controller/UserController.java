@@ -5,9 +5,16 @@ import com.projectSPI.bibliotheque.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import com.github.javafaker.Faker;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.http.HttpStatus;
+//import org.springframework.http.ResponseEntity;
+//import org.springframework.web.bind.annotation.*;
+//
+//import com.github.javafaker.Faker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,29 +48,30 @@ public class UserController {
         }
     }
 
-    @GetMapping("/generateRandomData")
-    public ResponseEntity<String> generateRandomUserData() {
-        try {
-            List<User> randomUsers = new ArrayList<>();
-            Faker faker = new Faker();
+//    @GetMapping("/generateRandomData")
+//    public ResponseEntity<String> generateRandomUserData() {
+//        try {
+//            List<User> randomUsers = new ArrayList<>();
+//            Faker faker = new Faker();
+//
+//            for (int i = 0; i < 10; i++) {
+//                String randomName = faker.name().fullName();
+//                String randomEmail = faker.internet().emailAddress();
+//
+//                User user = new User();
+//                user.setName(randomName);
+//                user.setEmail(randomEmail);
+//
+//                randomUsers.add(user);
+//            }
+//
+//            // Save the generated Users to the repository
+//            userRepository.saveAll(randomUsers);
+//
+//            return new ResponseEntity<>("Random data inserted successfully", HttpStatus.OK);
+//        } catch (Exception e) {
+//            return new ResponseEntity<>("Failed to insert random data", HttpStatus.INTERNAL_SERVER_ERROR);
+//        }
+//    }
 
-            for (int i = 0; i < 10; i++) {
-                String randomName = faker.name().fullName();
-                String randomEmail = faker.internet().emailAddress();
-
-                User user = new User();
-                user.setName(randomName);
-                user.setEmail(randomEmail);
-
-                randomUsers.add(user);
-            }
-
-            // Save the generated Users to the repository
-            userRepository.saveAll(randomUsers);
-
-            return new ResponseEntity<>("Random data inserted successfully", HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>("Failed to insert random data", HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
 }
